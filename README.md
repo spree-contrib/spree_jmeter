@@ -1,9 +1,6 @@
 Spree JMeter Benchmarks
 =======================
 
-Spree's performance tests have been designed to show the impact on
-["happy users"](https://help.ninefold.com/entries/22413845-Apdex-to-Measure-User-Satisfaction) as different platforms scale.
-
 We wanted to release them so you can reproduce what we did and run your own tests.
 
 Running the Tests
@@ -81,14 +78,20 @@ $ bundle exec bin/my_app_test.rb <DOMAIN> --users=200 --ramp=60 --length=300 \
                                          --region=us-west1 --name 'MyApp Test'
 ```
 
-
 Contributing
 ------------
-If you want to contribute to this repo, either by improving the tests or adding
-a new project to test against, then you know the drill:
 
-1. Fork the project
-2. Make your changes
-3. Make a pull request
+In the spirit of [free software](http://www.fsf.org/licensing/essays/free-sw.html), **everyone** is encouraged to help improve this project.
 
-Easy, n'est-ce pas?
+Here are some ways *you* can contribute:
+
+* by using prerelease versions
+* by reporting [bugs](https://github.com/spree-contrib/spree_jmeter/issues)
+* by suggesting new features
+* by [translating to a new language](https://github.com/spree-contrib/spree_jmeter/tree/master/config/locales)
+* by writing or editing documentation
+* by writing specifications
+* by writing code (*no patch is too small*: fix typos, add comments, clean up inconsistent whitespace)
+* by refactoring code
+* by resolving [issues](https://github.com/spree-contrib/spree_jmeter/issues)
+* by reviewing patches
