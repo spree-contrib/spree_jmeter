@@ -21,10 +21,11 @@ module SpreePerformance::Tests
         transaction '03_POST_add_product' do
           submit '/orders/populate', {
             fill_in: {
-              'utf8'                            => '%E2%9C%93',
-              'authenticity_token'              => '${authenticity_token}',
-              'variants[1]'                     => '1',
-              'commit'                          => 'Add To Cart'
+              'utf8'               => '%E2%9C%93',
+              'authenticity_token' => '${authenticity_token}',
+              'variant_id'         => '1',
+              'quantity'           => '1',
+              'commit'             => 'Add To Cart'
             }
           }
         end
@@ -40,10 +41,11 @@ module SpreePerformance::Tests
         transaction '06_POST_add_product' do
           submit '/orders/populate', {
             fill_in: {
-              'utf8'                            => '%E2%9C%93',
-              'authenticity_token'              => '${authenticity_token}',
-              'variants[4]'                     => '1',
-              'commit'                          => 'Add To Cart'
+              'utf8'               => '%E2%9C%93',
+              'authenticity_token' => '${authenticity_token}',
+              'variant_id'         => '1',
+              'quantity'           => '1',
+              'commit'             => 'Add To Cart'
             }
           }
         end
