@@ -5,10 +5,10 @@ module SpreePerformance::Tests
 
     def plan
       threads @users, {ramp_time: @ramp, duration: @length, continue_forever: true} do
-
         extract name: 'authenticity_token', regex: 'meta content="(.+?)" name="csrf-token"'
 
         random_timer 5000, 10000
+        summary_report
 
         transaction '01_GET_home_page' do
           visit '/'
@@ -64,5 +64,6 @@ module SpreePerformance::Tests
 
       end
     end
+
   end
 end
