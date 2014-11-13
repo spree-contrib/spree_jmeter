@@ -4,11 +4,18 @@ module SpreePerformance::Tests
   class Spree < SpreePerformance::Test
 
     def plan
+      # Define listeners to graph & report results with.
+      aggregate_graph
+      aggregate_report
+      graph_results
+      response_time_graph
+      summary_report
+      view_results_tree
+
       threads @users, {ramp_time: @ramp, duration: @length, continue_forever: true} do
         extract name: 'authenticity_token', regex: 'meta content="(.+?)" name="csrf-token"'
 
         random_timer 5000, 10000
-        summary_report
 
         transaction '01_GET_home_page' do
           visit '/'
